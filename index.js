@@ -18,11 +18,11 @@ app.get("/api/hello", (request, response) => {
 })
 
 app.get("/api/whoami", (request, response) => {
-  const ip = request.ip
+  const ipaddress = request.ip
   const language = request.get('Accept-Language')
   const software = request.get('User-Agent')
   response.json({
-    ip,
+    ipaddress,
     language,
     software
   })
